@@ -1,11 +1,11 @@
 const zod = require("zod");
 
-const createTodo = z.object({
+const createTodo = zod.object({
   tittle: zod.string(),
   description: zod.string(),
 });
 
-const updateTodo = z.object({
+const updateTodo = zod.object({
   id: zod.string(),
 });
 

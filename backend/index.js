@@ -59,3 +59,5 @@ app.put("/completed", async (req, res) => {
     msg: "Todo marked",
   });
 });
+
+app.listen(3000);
