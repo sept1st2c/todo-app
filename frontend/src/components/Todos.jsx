@@ -1,13 +1,31 @@
+import { useState } from "react";
+
 export function Todos({ todos }) {
+  const [completed, setCompleted] = useState([]);
   return (
     <div>
-      {todos.map((todo) => {
+      {todos.map((todos) => {
         return (
           <div>
-            <h1>{todo.title}</h1>
-            <h2>{todo.description}</h2>
-            <button>
-              {todo.completed == true ? "completed" : "Mark as done"}
+            <h1>{todos.title}</h1>
+            <h2>{todos.description}</h2>
+            <button
+            //       onClick={() => {
+            //         fetch("http://localhost:3000/completed", {
+            //           method: "GET",
+            //           body: JSON.stringify({
+            //             completed: true,
+            //           }),
+            //           headers: {
+            //             "content-Type": "application/json",
+            //           },
+            //         }).then(async function (res) {
+            //           const json = await res.json();
+            //           alert("Todo added");
+            //         });
+            //       }}
+            >
+              {todos.completed == true ? "completed" : "Mark as done"}
             </button>
           </div>
         );
